@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luhana Foreign Employment Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e6f0fa 0%, #ffffff 100%);
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: #1e3a8a;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: #00b4d8;
+    }
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .whatsapp {
+      display: flex;
+      align-items: center;
+      color: #10b981;
+      font-weight: 500;
+    }
+    .whatsapp img {
+      width: 20px;
+      margin-right: 5px;
+    }
+    .button {
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.3s;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .contact-btn {
+      background: #00b4d8;
+      color: white;
+    }
+    .signin-btn {
+      background: #4b5563;
+      color: white;
+    }
+    .goto-form-btn {
+      background: #f97316;
+      color: white;
+    }
+    .filters-section, .candidate-form, .candidate-details {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1100px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 1px solid #e5e7eb;
+    }
+    .candidate-form div, .candidate-details div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .candidate-form label, .candidate-details label {
+      min-width: 150px;
+      font-weight: 500;
+      color: #1f2937;
+    }
+    .candidate-form input, .candidate-form select, .candidate-details input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      background: white;
+    }
+    .candidate-details input {
+      background: #f9fafb;
+      color: #1f2937;
+      font-weight: 500;
+    }
+    .photo-display img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 6px;
+    }
+    #toggleDetails {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      background: #facc15;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="whatsapp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      +251920588505
+    </div>
+    <div class="logo">
+      <img src="c:/Users/yohannes/Desktop/photo_2025-07-01_12-33-01.jpg" alt="Luhana Logo" />
+      <span>LUHANA FOREIGN EMPLOYMENT AGENCY</span>
+    </div>
+    <div class="top-actions">
+      <a class="goto-form-btn button" href="#formSection">Go to Form</a>
+      <a class="signin-btn button" href="#">Sign In</a>
+      <select style="background: #4b5563; color: white; border: none; padding: 8px;">
+        <option>English (US)</option>
+        <option>Amharic</option>
+      </select>
+      <a class="contact-btn button" href="#">Contact Us</a>
+    </div>
+  </header>
+
+  <section class="candidate-form" id="formSection">
+    <h3>Candidate Form</h3>
+    <form id="candidateForm">
+      <div><label>Age:</label><input type="number" id="age"><label>Name:</label><input type="text" id="name"></div>
+      <div><label>Marital Status:</label><select id="maritalStatus"><option>Single</option><option>Married</option><option>Single Mom</option></select><label>Religion:</label><select id="religion"><option>Muslim</option><option>Christian</option><option>Non Muslim</option></select></div>
+      <div><label>Salary:</label><input type="number" id="salary"><label>Occupation:</label><input type="text" id="occupation"></div>
+      <div><label>Contract Period:</label><input type="text" id="contractPeriod"><label>Post Applied To:</label><input type="text" id="postApplied"></div>
+      <div><label>Address:</label><input type="text" id="address"><label>Passport No:</label><input type="text" id="passportNo"></div>
+      <div><label>Experience:</label><select id="experience"><option>First-Timer</option><option>Ex-Abroad</option></select><label>Education:</label><select id="education"><option>Primary</option><option>Intermediate</option><option>Secondary</option><option>University</option></select></div>
+      <div><label>Experience Period:</label><input type="text" id="experiencePeriod"><label>Experience Country:</label><input type="text" id="experienceCountry"></div>
+      <div><label>Photo:</label><input type="file" id="photo" accept="image/*"></div>
+      <div><label>House Hold Work:</label><select id="houseHoldWork"><option>YES</option><option>NO</option></select><label>Cook:</label><select id="cook"><option>Yes</option><option>No</option><option>Desire to Learn</option></select></div>
+      <div><label>Caring Old People:</label><select id="caringOld"><option>Yes</option><option>No</option><option>Don't Mind</option></select><label>Looking After Children:</label><select id="lookingAfter"><option>Yes</option><option>No</option><option>Don't Mind</option></select></div>
+      <button type="submit" class="button filter-btn">Submit</button>
+    </form>
+    <section class="candidate-details" id="candidateDetails"></section>
+  </section>
+
+  <script>
+    document.getElementById('candidateForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const detailsSection = document.getElementById('candidateDetails');
+
+      const get = id => document.getElementById(id).value;
+      let photoDataUrl = '';
+      const photoInput = document.getElementById('photo');
+
+      function updateDisplay() {
+        detailsSection.innerHTML = `
+          <h3>Candidate Summary</h3>
+          <div><label>Name:</label><input type="text" value="${get('name')}" readonly></div>
+          <div><label>Religion:</label><input type="text" value="${get('religion')}" readonly></div>
+          <div class="photo-display"><label>Photo:</label>${photoDataUrl ? `<img src="${photoDataUrl}" alt="Candidate Photo">` : 'N/A'}</div>
+          <button id="toggleDetails">Show more</button>
+          <div id="extraDetails" style="display:none;">
+            <div><label>Age:</label><input type="text" value="${get('age')}" readonly><label>Marital Status:</label><input type="text" value="${get('maritalStatus')}" readonly></div>
+            <div><label>Salary:</label><input type="text" value="${get('salary')}" readonly><label>Occupation:</label><input type="text" value="${get('occupation')}" readonly></div>
+            <div><label>Contract Period:</label><input type="text" value="${get('contractPeriod')}" readonly><label>Post Applied To:</label><input type="text" value="${get('postApplied')}" readonly></div>
+            <div><label>Address:</label><input type="text" value="${get('address')}" readonly><label>Passport No:</label><input type="text" value="${get('passportNo')}" readonly></div>
+            <div><label>Experience:</label><input type="text" value="${get('experience')}" readonly><label>Education:</label><input type="text" value="${get('education')}" readonly></div>
+            <div><label>Experience Period:</label><input type="text" value="${get('experiencePeriod')}" readonly><label>Experience Country:</label><input type="text" value="${get('experienceCountry')}" readonly></div>
+            <div><label>House Hold Work:</label><input type="text" value="${get('houseHoldWork')}" readonly><label>Cook:</label><input type="text" value="${get('cook')}" readonly></div>
+            <div><label>Caring Old People:</label><input type="text" value="${get('caringOld')}" readonly><label>Looking After Children:</label><input type="text" value="${get('lookingAfter')}" readonly></div>
+          </div>
+        `;
+
+        document.getElementById('toggleDetails').addEventListener('click', function() {
+          const extra = document.getElementById('extraDetails');
+          if (extra.style.display === 'none') {
+            extra.style.display = 'block';
+            this.innerText = 'Show less';
+          } else {
+            extra.style.display = 'none';
+            this.innerText = 'Show more';
+          }
+        });
+
+        detailsSection.style.display = 'block';
+      }
+
+      if (photoInput.files && photoInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          photoDataUrl = e.target.result;
+          updateDisplay();
+        };
+        reader.readAsDataURL(photoInput.files[0]);
+      } else {
+        updateDisplay();
+      }
+    });
+  </script>
+</body>
+</html>
